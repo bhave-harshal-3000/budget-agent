@@ -203,12 +203,6 @@ def status():
         "result": job.get("result")
     }), 200
 
-
-@app.route("/", methods=["GET"])
-def root():
-    return jsonify({"message": "Cardano Financial Agent MIP-003 Ready"}), 200
-
-
-if __name__ == "__main__":
-    port = int(os.getenv('PORT', 10000))
-    app.run(host="0.0.0.0", port=port)
+if __name__ == '__main__':
+    port = int(os.getenv('INSIGHTS_API_PORT', 5002))
+    app.run(debug=True, host='0.0.0.0', port=port)

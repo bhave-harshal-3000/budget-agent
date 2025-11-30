@@ -4,3 +4,4 @@ python-dotenv>=1.0.0
 crewai[google-genai]>=0.34.3
 google-generativeai>=0.3.0
 flask
+gunicorn
